@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Dom - Erleben Sie den Kölner Dom in VR</title>
+    <meta name="description"
+        content="Meta Dom von Northdocks: Die ultimative VR & AR Tour des Kölner Doms. Jetzt verfügbar für Meta Quest 3 und Pico.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">NORTHDOCKS <span class="highlight">XR</span></div>
+        <div class="nav-links">
+            <a href="#features">Funktionen</a>
+            <a href="#history">Geschichte</a>
+            <a href="#preview">Vorschau</a>
+            <a href="#download" class="cta-small">App Holen</a>
+            <div class="lang-switcher">
+                <a href="index.html" class="lang-link">EN</a>
+                <span class="numerator">|</span>
+                <a href="#" class="lang-link active">DE</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div id="hero-canvas"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="badge">JETZT ERHÄLTLICH</span>
+            <h1>META <span class="gradient-text">DOM</span></h1>
+            <p class="subtitle">Der Kölner Dom: Neu gedacht in Virtual Reality</p>
+            <div class="cta-group">
+                <a href="#download" class="btn-primary"><i class="fa-brands fa-meta"></i> Meta Store</a>
+                <button id="openVideo" class="btn-secondary"><i class="fa-solid fa-play"></i> Trailer Ansehen</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Entdecken</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Erlebe Geschichte <br> wie nie zuvor</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card" data-delay="100">
+                    <div class="icon-box"><i class="fa-solid fa-vr-cardboard"></i></div>
+                    <h3>Immersive Tour</h3>
+                    <p>Schreite durch das Mittelschiff, erklimme die Türme und erkunde verborgene Winkel des Doms bequem
+                        von zu Hause aus.</p>
+                </div>
+                <div class="feature-card" data-delay="200">
+                    <div class="icon-box"><i class="fa-solid fa-cube"></i></div>
+                    <h3>High Fidelity</h3>
+                    <p>Angetrieben durch Photogrammetrie und Unreal Engine 5 Technologie für ein hyper-realistisches
+                        Erlebnis auf Quest 3 und Pico.</p>
+                </div>
+                <div class="feature-card" data-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Interaktiver Guide</h3>
+                    <p>Lerne die Geschichte und Geheimnisse dieses gotischen Meisterwerks mit integrierten Audioguides
+                        und Infopunkten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="history-section">
+        <div class="container">
+            <div class="history-grid">
+                <div class="history-content">
+                    <span class="badge-outline">WELTKULTURERBE</span>
+                    <h2>Ein Meisterwerk der Hochgotik</h2>
+                    <p>Der Kölner Dom ist nicht nur ein Wahrzeichen; er ist ein Zeugnis jahrhundertelangen Glaubens und
+                        Handwerkskunst. In seinem Herzen liegt der <strong>Dreikönigenschrein</strong>, das größte
+                        Reliquiar der westlichen Welt, das seit über 800 Jahren Pilger anzieht.</p>
+
+                    <div class="preservation-box">
+                        <h3><i class="fa-solid fa-hands-holding-circle"></i> Für die Ewigkeit bewahrt</h3>
+                        <p>Dieses architektonische Wunder steht heute dank des unermüdlichen Einsatzes des <a
+                                href="https://www.zdv.de/" target="_blank">Zentral-Dombau-Vereins (ZDV)</a>. Seit 1842
+                            ist der ZDV das "Gerüst" des Doms und finanziert über 60% der Erhaltungskosten, um dieses
+                            Erbe für zukünftige Generationen zu sichern.</p>
+                    </div>
+
+                    <a href="https://www.koelner-dom.de/" target="_blank" class="btn-text">
+                        Offizielle Webseite Besuchen <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="history-gallery">
+                    <div class="gallery-main">
+                        <img src="img/cathedral-sunset.png" alt="Kölner Dom bei Sonnenuntergang">
+                    </div>
+                    <div class="gallery-grid">
+                        <img src="img/cathedral-interior.png" alt="Dom Innenraum">
+                        <img src="img/cathedral-spire.png" alt="Blick vom Turm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="tech-section">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-image">
+                    <img src="img/digital-twin-wireframe.png" alt="Kölner Dom 3D Drahtgittermodell"
+                        class="wireframe-img">
+                    <div class="tech-overlay">
+                        <span><i class="fa-solid fa-layer-group"></i> DRAHTGITTER ANSICHT</span>
+                    </div>
+                </div>
+                <div class="tech-content">
+                    <span class="badge">PRÄZISIONSARBEIT</span>
+                    <h2>Der Digitale Zwilling</h2>
+                    <p class="subtitle">Erstellung einer zentimetergenauen Kopie des beeindruckendsten gotischen
+                        Bauwerks der Welt.</p>
+
+                    <p>Meta Dom basiert auf einem massiven Photogrammetrie-Projekt von <strong
+                            class="highlight-text">Northdocks</strong>. Mit modernster Drohnentechnologie wurden über
+                        <strong>100.000 hochauflösende Fotos</strong> aufgenommen, um den Dom im digitalen Raum zu
+                        rekonstruieren.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">2 Mrd.+</span>
+                            <span class="stat-label">Polygone</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">216K</span>
+                            <span class="stat-label">Texturauflösung</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">&lt;1mm</span>
+                            <span class="stat-label">Genauigkeit</span>
+                        </div>
+                    </div>
+
+                    <p class="tech-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Dieser "Digitale Zwilling" unterstützt den <strong>ZDV</strong> aktiv bei der Restaurierung. Er
+                        ermöglicht es den Dombaumeistern, Schäden an den Türmen zu inspizieren, die vom Boden aus
+                        unsichtbar sind, und gewährleistet so die Sicherheit des Doms ohne kostspielige Gerüste.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preview" class="video-section">
+        <div class="container">
+            <div class="video-wrapper">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0bvw4mu8jRQ?si=vXq5Xq5Xq5Xq5Xq5"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="cta-section">
+        <div class="container">
+            <h2>Betritt den Dom</h2>
+            <p>Lade Meta Dom heute herunter und beginne deine Reise.</p>
+            <div class="store-buttons">
+                <a href="#" class="store-btn meta">
+                    <i class="fa-brands fa-meta"></i>
+                    <div class="btn-text">
+                        <span>Erhältlich auf</span>
+                        <strong>Meta Quest</strong>
+                    </div>
+                </a>
+                <a href="#" class="store-btn pico">
+                    <i class="fa-solid fa-glasses"></i>
+                    <div class="btn-text">
+                        <span>Hol es dir im</span>
+                        <strong>Pico Store</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h4>NORTHDOCKS</h4>
+                <p>Digitale Zwillinge & XR Lösungen</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.northdocks.com/">Unternehmen</a>
+                <a href="#">Datenschutzerklärung</a>
+                <a href="#">Impressum</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Northdocks GmbH. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-video-container">
+                <iframe id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="hero-3d.js"></script>
+</body>
+
+</html>

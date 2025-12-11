@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
@@ -22,10 +23,16 @@
             <a href="#history">History</a>
             <a href="#preview">Preview</a>
             <a href="#download" class="cta-small">Get App</a>
+            <div class="lang-switcher">
+                <a href="#" class="lang-link active">EN</a>
+                <span class="numerator">|</span>
+                <a href="index_de.html" class="lang-link">DE</a>
+            </div>
         </div>
     </nav>
 
     <header class="hero">
+        <div id="hero-canvas"></div>
         <div class="hero-bg"></div>
         <div class="hero-content">
             <span class="badge">NOW AVAILABLE</span>
@@ -125,7 +132,8 @@
                     <p>Meta Dom is built upon a massive photogrammetry project by <strong
                             class="highlight-text">Northdocks</strong>. Using advanced drone technology, over
                         <strong>100,000 high-resolution photos</strong> were captured to reconstruct the cathedral in
-                        digital space.</p>
+                        digital space.
+                    </p>
 
                     <div class="stats-grid">
                         <div class="stat-item">
@@ -215,6 +223,8 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="hero-3d.js"></script>
 </body>
 
 </html>
