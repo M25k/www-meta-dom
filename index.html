@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Dom - Experience the Cologne Cathedral in VR</title>
+    <meta name="description"
+        content="Meta Dom by Northdocks: The ultimate VR & AR tour of the Cologne Cathedral. Available now on Meta Quest 3 and Pico Store.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">NORTHDOCKS <span class="highlight">XR</span></div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#history">History</a>
+            <a href="#preview">Preview</a>
+            <a href="#download" class="cta-small">Get App</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <span class="badge">NOW AVAILABLE</span>
+            <h1>META <span class="gradient-text">DOM</span></h1>
+            <p class="subtitle">The Cologne Cathedral Reimagined in Virtual Reality</p>
+            <div class="cta-group">
+                <a href="#download" class="btn-primary"><i class="fa-brands fa-meta"></i> Meta Store</a>
+                <button id="openVideo" class="btn-secondary"><i class="fa-solid fa-play"></i> Watch Trailer</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Explore</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience History <br> Like Never Before</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card" data-delay="100">
+                    <div class="icon-box"><i class="fa-solid fa-vr-cardboard"></i></div>
+                    <h3>Immersive Tour</h3>
+                    <p>Walk through the nave, climb the spires, and explore hidden corners of the cathedral comfortably
+                        from your home.</p>
+                </div>
+                <div class="feature-card" data-delay="200">
+                    <div class="icon-box"><i class="fa-solid fa-cube"></i></div>
+                    <h3>High Fidelity</h3>
+                    <p>Powered by photogrammetry and Unreal Engine 5 tech for a hyper-realistic experience on Quest 3
+                        and Pico.</p>
+                </div>
+                <div class="feature-card" data-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Interactive Guide</h3>
+                    <p>Learn the history and secrets of this Gothic masterpiece with integrated audio guides and
+                        information points.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="history-section">
+        <div class="container">
+            <div class="history-grid">
+                <div class="history-content">
+                    <span class="badge-outline">WORLD HERITAGE</span>
+                    <h2>A Masterpiece of High Gothic Architecture</h2>
+                    <p>The Cologne Cathedral (Kölner Dom) is not just a landmark; it is a testament to centuries of
+                        faith and craftsmanship. At its heart lies the <strong>Shrine of the Three Kings</strong>
+                        (Dreikönigenschrein), the largest reliquary of the Western world, which has drawn pilgrims for
+                        over 800 years.</p>
+
+                    <div class="preservation-box">
+                        <h3><i class="fa-solid fa-hands-holding-circle"></i> Preserved for Eternity</h3>
+                        <p>This architectural wonder stands tall today thanks to the tireless dedication of the <a
+                                href="https://www.zdv.de/" target="_blank">Zentral-Dombau-Verein (ZDV)</a>. Since 1842,
+                            the ZDV has been the "scaffold" of the cathedral, funding over 60% of preservation costs to
+                            ensure this legacy survives for future generations.</p>
+                    </div>
+
+                    <a href="https://www.koelner-dom.de/" target="_blank" class="btn-text">
+                        Visit Official Website <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="history-gallery">
+                    <div class="gallery-main">
+                        <img src="img/cathedral-sunset.png" alt="Cologne Cathedral at Sunset">
+                    </div>
+                    <div class="gallery-grid">
+                        <img src="img/cathedral-interior.png" alt="Cathedral Interior">
+                        <img src="img/cathedral-spire.png" alt="View from Spire">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="tech-section">
+        <div class="container">
+            <div class="tech-grid">
+                <div class="tech-image">
+                    <img src="img/digital-twin-wireframe.png" alt="Cologne Cathedral 3D Wireframe Model"
+                        class="wireframe-img">
+                    <div class="tech-overlay">
+                        <span><i class="fa-solid fa-layer-group"></i> WIREFRAME VIEW</span>
+                    </div>
+                </div>
+                <div class="tech-content">
+                    <span class="badge">PRECISION ENGINEERING</span>
+                    <h2>The Digital Twin</h2>
+                    <p class="subtitle">Creating a centimeter-accurate copy of the world's most impressive Gothic
+                        structure.</p>
+
+                    <p>Meta Dom is built upon a massive photogrammetry project by <strong
+                            class="highlight-text">Northdocks</strong>. Using advanced drone technology, over
+                        <strong>100,000 high-resolution photos</strong> were captured to reconstruct the cathedral in
+                        digital space.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">2B+</span>
+                            <span class="stat-label">Polygons</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">216K</span>
+                            <span class="stat-label">Texture Res</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">&lt;1mm</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                    </div>
+
+                    <p class="tech-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        This "Digital Twin" actively assists the <strong>ZDV</strong> in restoration. It allows master
+                        builders to inspect damage on the spires that is invisible from the ground, ensuring the
+                        cathedral's safety without costly scaffolding.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preview" class="video-section">
+        <div class="container">
+            <div class="video-wrapper">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0bvw4mu8jRQ?si=vXq5Xq5Xq5Xq5Xq5"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="cta-section">
+        <div class="container">
+            <h2>Step Into the Cathedral</h2>
+            <p>Download Meta Dom today and start your journey.</p>
+            <div class="store-buttons">
+                <a href="#" class="store-btn meta">
+                    <i class="fa-brands fa-meta"></i>
+                    <div class="btn-text">
+                        <span>Available on</span>
+                        <strong>Meta Quest</strong>
+                    </div>
+                </a>
+                <a href="#" class="store-btn pico">
+                    <i class="fa-solid fa-glasses"></i>
+                    <div class="btn-text">
+                        <span>Get it on</span>
+                        <strong>Pico Store</strong>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h4>NORTHDOCKS</h4>
+                <p>Digital Twin & XR Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.northdocks.com/">Company</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Imprint</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Northdocks GmbH. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-video-container">
+                <iframe id="modalIframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
