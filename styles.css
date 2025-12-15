@@ -279,7 +279,7 @@ h1 {
 }
 
 .features {
-    padding: 8rem 0;
+    padding: 4rem 0;
     position: relative;
 }
 
@@ -586,6 +586,21 @@ h1 {
         order: -1;
         /* Image first on mobile */
         margin-bottom: 2rem;
+    }
+
+    .wireframe-img {
+        transform: none;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .tech-image {
+        max-width: 100%;
     }
 }
 

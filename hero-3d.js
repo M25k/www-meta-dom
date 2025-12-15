@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const size = box.getSize(new THREE.Vector3());
 
         const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = 3.5 / maxDim; // Fit within ~3.5 units height
+        const scale = 5.0 / maxDim; // Fit within ~5.0 units height (Bigger)
 
         model.scale.setScalar(scale);
         model.position.sub(center.multiplyScalar(scale)); // Center it
@@ -66,8 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Position on the LEFT
-        model.position.x = -3.5;
-        model.position.y = -1;
+        model.position.x = -2.5; // Closer to center
+        model.position.y = -3;
+        model.scale.set(12, 12, 12);
         // Slight rotation to show off depth
         model.rotation.y = Math.PI / 8;
 
@@ -75,6 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, undefined, (error) => {
         console.error('An error happened loading GLB:', error);
     });
+
+    let userMesh; // Declare outside for access in resize
+    let userGroupBaseX = 4.0; // Default base X for user group
 
     // LOAD PROJECTION USER IMAGE
     const textureLoader = new THREE.TextureLoader();
@@ -96,16 +100,35 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 0.9
         });
 
-        const userMesh = new THREE.Mesh(geometry, material);
+        userMesh = new THREE.Mesh(geometry, material);
         // Position on the RIGHT
-        userMesh.position.x = 3.5;
+        userMesh.position.x = 2.0; // Closer to center
         userMesh.position.y = -0.5;
+
+        // Initial Layout
+        updateLayout();
+
         userGroup.add(userMesh);
     });
 
+    function updateLayout() {
+        if (!userMesh) return;
+        if (window.innerWidth < 768) {
+            // Mobile
+            userMesh.scale.set(1, 1, 1); // Half size (2 -> 1)
+            userMesh.position.x = 0; // Local position 0, Group handles offset
+            userGroupBaseX = 1.0; // Target X for Group
+        } else {
+            // Desktop
+            userMesh.scale.set(2, 2, 2);
+            userMesh.position.x = 0; // Local position 0
+            userGroupBaseX = 4.0; // Target X for Group
+        }
+    }
+
     // PARTICLES (Wireframe parts simulation)
     const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 300;
+    const particlesCount = 500;
     const posArray = new Float32Array(particlesCount * 3);
 
     for (let i = 0; i < particlesCount * 3; i += 3) {
@@ -148,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
+        updateLayout();
     });
 
     // ANIMATION LOOP
@@ -158,17 +182,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const elapsedTime = clock.getElapsedTime();
 
         // Parallax Targets
-        targetX = mouseX * 0.001;
-        targetY = mouseY * 0.001;
+        if (window.innerWidth < 768) {
+            // Auto-motion for mobile
+            targetX = Math.sin(elapsedTime * 0.5) * 1; // Stronger 
+            targetY = Math.cos(elapsedTime * 0.3) * 0.6; // Stronger
+        } else {
+            targetX = mouseX * 0.001;
+            targetY = mouseY * 0.001;
+        }
 
         // Model Group (Moves opposite to mouse for depth)
         // Rotate slightly
-        modelGroup.rotation.y += 0.05 * (targetX - modelGroup.rotation.y);
-        modelGroup.rotation.x += 0.05 * (targetY - modelGroup.rotation.x);
+        modelGroup.rotation.y += 0.05 * ((targetX * 0.2) - modelGroup.rotation.y);
+        modelGroup.rotation.x += 0.05 * ((targetY * 0.2) - modelGroup.rotation.x);
 
         // User Group (Moves slightly differently)
-        userGroup.position.x += 0.03 * ((3.5 - targetX * 2) - userGroup.position.x); // Parallax X translation
-        userGroup.rotation.z = targetX * 0.1; // Subtle tilt
+        // Moves around userGroupBaseX
+        userGroup.position.x += 0.03 * ((userGroupBaseX - targetX * 0.1) - userGroup.position.x);
+        userGroup.rotation.z = targetX * 0.005; // Subtle tilt
 
         // Particles float
         particlesMesh.rotation.y = -mouseX * 0.0001;
