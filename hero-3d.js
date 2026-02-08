@@ -38,9 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(userGroup);
 
     // LOAD GLB MODEL
+    let model; // Exposed for updateLayout
     const gltfLoader = new THREE.GLTFLoader();
     gltfLoader.load('Koelner-Dom.glb', (gltf) => {
-        const model = gltf.scene;
+        model = gltf.scene;
         // Adjust scale and position based on typical GLB sizes - may need tuning
         // Assuming model is roughly unit scale or needs normalization
 
@@ -65,14 +66,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Position on the LEFT
-        model.position.x = -2.5; // Closer to center
+        // Initial Position (will be updated by updateLayout)
+        model.position.x = -2.5;
         model.position.y = -3;
         model.scale.set(12, 12, 12);
         // Slight rotation to show off depth
         model.rotation.y = Math.PI / 8;
 
         modelGroup.add(model);
+        updateLayout(); // Ensure correct initial layout
     }, undefined, (error) => {
         console.error('An error happened loading GLB:', error);
     });
@@ -114,15 +116,25 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateLayout() {
         if (!userMesh) return;
         if (window.innerWidth < 768) {
-            // Mobile
-            userMesh.scale.set(1, 1, 1); // Half size (2 -> 1)
-            userMesh.position.x = 0; // Local position 0, Group handles offset
-            userGroupBaseX = 1.0; // Target X for Group
+            // Mobile / Portrait
+            userMesh.scale.set(1, 1, 1);
+            userMesh.position.x = 0;
+            userGroupBaseX = 0; // Center the user group
+
+            if (model) {
+                model.position.x = 0; // Center the model
+                model.scale.set(8, 8, 8); // Slightly smaller on mobile to fit
+            }
         } else {
             // Desktop
             userMesh.scale.set(2, 2, 2);
-            userMesh.position.x = 0; // Local position 0
-            userGroupBaseX = 4.0; // Target X for Group
+            userMesh.position.x = 0;
+            userGroupBaseX = 4.0;
+
+            if (model) {
+                model.position.x = -2.5; // Restore desktop position
+                model.scale.set(12, 12, 12); // Restore desktop scale
+            }
         }
     }
 
