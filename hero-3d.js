@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mobile / Portrait
             userMesh.scale.set(1, 1, 1);
             userMesh.position.x = 0;
+            userMesh.position.z = 1.0; // Bring in front of model to avoid clipping
             userGroupBaseX = 0; // Center the user group
 
             if (model) {
@@ -129,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Desktop
             userMesh.scale.set(2, 2, 2);
             userMesh.position.x = 0;
+            userMesh.position.z = 0; // Reset z-position
             userGroupBaseX = 4.0;
 
             if (model) {
