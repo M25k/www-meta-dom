@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northdocks | XR & Digital Twin Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">NORTHDOCKS</div>
+        <div class="nav-links">
+            <a href="#verticals">Verticals</a>
+            <a href="#about">Über Uns</a>
+            <a href="#approach">Vorgehen</a>
+            <a href="#contact" class="cta-small">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-bg" style="background-image: url('img/bruecke_logo_titel.jpg');"></div>
+        <div class="hero-content">
+            <h1>DIGITAL TWIN & <span class="highlight">XR SOLUTIONS</span></h1>
+        </div>
+        <div class="scroll-indicator">
+            <span>Discover</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- Verticals Grid -->
+    <section id="verticals" class="verticals-section">
+        <div class="section-header">
+            <h2 class="impact-header">OUR VERTICALS</h2>
+        </div>
+        <div class="verticals-grid">
+            <!-- Meditrain VR (Pos 3) -->
+            <a href="https://meditrainvr.com/" target="_blank" class="grid-item">
+                <img src="img/verticals/grid_pos_03.png" alt="Meditrain VR">
+                <div class="overlay">
+                    <h3>Meditrain VR</h3>
+                    <p>Medizinisches Training.</p>
+                </div>
+            </a>
+            <!-- 3D Erlebniswelten (Pos 2) -->
+            <a href="https://firefightervrmobile.de/" target="_blank" class="grid-item">
+                <img src="img/verticals/grid_pos_02.png" alt="Firefighter VR">
+                <div class="overlay">
+                    <h3>Firefighter VR</h3>
+                    <p>Feuerwehr Einsatztraining.</p>
+                </div>
+            </a>
+            <!-- Drohnen & Daten (Pos 5) -->
+            <a href="#" target="_blank" class="grid-item">
+                <img src="img/verticals/grid_pos_01.png" alt="Drohnen & Daten">
+                <div class="overlay">
+                    <h3>Drohnen & Daten</h3>
+                    <p>Präzise Erfassung.</p>
+                </div>
+            </a>
+            <!-- Forschung & Entwicklung (Pos 4) -> Meditrain -->
+            <a href="" target="_blank" class="grid-item">
+                <img src="img/verticals/grid_pos_04.png" alt="Meditrain VR">
+                <div class="overlay">
+                    <h3>Meditrain VR</h3>
+                    <p>Medizinisches Training.</p>
+                </div>
+            </a>
+            <!-- VR Training (Pos 1) -> Firefighter VR -->
+            <a href="https://firefightervrmobile.de/" target="_blank" class="grid-item">
+                <img src="img/verticals/grid_pos_05.png" alt="Firefighter VR">
+                <div class="overlay">
+                    <h3>Firefighter VR</h3>
+                    <p>Einsatztraining.</p>
+                </div>
+            </a>
+            <!-- Placeholder for 6th item to keep grid balanced -->
+            <div class="grid-item empty-item">
+                <div class="overlay">
+                    <h3>Future Tech</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section: Wer wir sind -->
+    <section id="about" class="info-section">
+        <div class="info-bg" style="background-image: url('img/turmorange.jpg');"></div>
+        <div class="info-overlay"></div>
+        <div class="container">
+            <div class="info-content">
+                <h2>WER WIR SIND</h2>
+                <p>Wir sind Pioniere des Spatial Computing. Unser Team fusioniert XR-Technologie mit präzisen
+                    Industriedaten zu lebendigen Digital Twins. Wir glauben an eine vernetzte Zukunft und gestalten die
+                    Schnittstelle zwischen Mensch und Digitalisierung.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section: Unser Anspruch -->
+    <section class="info-section">
+        <div class="info-bg" style="background-image: url('img/anlage-yan2.jpg');"></div>
+        <div class="info-overlay"></div>
+        <div class="container">
+            <div class="info-content right-aligned">
+                <h2>UNSER ANSPRUCH</h2>
+                <p>Ganzheitliche Exzellenz. Wir bieten keine Teillösungen, sondern funktionierende Ökosysteme. Von der
+                    Datenerfassung bis zur immersiven Anwendung begleiten wir Sie persönlich – technisch perfekt und
+                    individuell auf Ihre Ziele zugeschnitten.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Image Break -->
+    <section class="image-break">
+        <div class="parallax-bg" style="background-image: url('img/scycrane.jpg');"></div>
+        <div class="break-content">
+            <h2>Wir lieben Technik.</h2>
+            <p>Nutzen Sie mit uns die Möglichkeiten echter Digitalisierung mit Industry 4.0 und XR.</p>
+        </div>
+    </section>
+
+    <!-- Info Section: Unser Vorgehen -->
+    <!-- Section: Digital Twin Solutions -->
+    <section class="info-section">
+        <div class="info-bg" style="background-image: url('data/images/wassertrum.jpg');"></div>
+        <div class="info-overlay"></div>
+        <div class="container">
+            <div class="info-content">
+                <h2>DIGITAL TWIN SOLUTIONS</h2>
+                <p>Verwandeln Sie komplexe Daten in klare Entscheidungen. Unsere Digital Twin Lösungen integrieren
+                    IoT-Daten, Bestandsaufnahmen und Prozessinformationen in ein intuitives 3D-Modell. Dies ermöglicht
+                    präzise Analysen, vorausschauende Wartung und eine effizientere Zusammenarbeit über alle Abteilungen
+                    hinweg.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: XR Solutions -->
+    <section class="info-section">
+        <div class="info-bg" style="background-image: url('data/images/fulldome-Tiefenwirkung.jpg');"></div>
+        <div class="info-overlay"></div>
+        <div class="container">
+            <div class="info-content right-aligned">
+                <h2>XR SOLUTIONS</h2>
+                <p>Erleben Sie Ihre Visionen, bevor sie Realität werden. Mit unseren XR-Technologien (VR/AR) schaffen
+                    wir immersive Trainingsumgebungen und beeindruckende Präsentationen. Ob für Sicherheitsschulungen
+                    oder Vertrieb: Wir machen abstrakte Konzepte greifbar und verständlich.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: KONTAKT FORMULIAR -->
+    <section id="contact" class="info-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-header">
+                    <h2>Schreiben Sie uns</h2>
+                    <p>Gerne beraten wir Sie individuell zu Ihrem Vorhaben.</p>
+                </div>
+
+                <form id="contact-form" action="https://formspree.io/f/mvgebako" method="POST">
+                    <label>
+                        Ihre Email:
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        Ihre Nachricht:
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
+                    <button type="submit">Senden</button>
+                    <p id="my-form-status"></p>
+                </form>
+
+
+
+                <div class="contact-info" style="margin-top: 50px; text-align: center;">
+                    <h3>Wo Sie uns treffen können:</h3>
+                    <p>Büro Monheim - Northdocks GmbH<br>Niederstr. 18 D-40789 Monheim<br><a
+                            href="tel:+4921739996713">+49 (0) 2173 9996713</a></p>
+                    <p>Büro Kiel<br>Schauenburgerstr. 116<br>D-24118 Kiel</p>
+                    <p>Patrick D. Reschke<br><a href="mailto:kontakt@northdocks.com">kontakt@northdocks.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var form = document.getElementById("contact-form");
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Danke für Ihre Nachricht! Wir melden uns zeitnah.";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! Es ist ein Fehler aufgetreten."
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! Es ist ein Fehler aufgetreten."
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h4>NORTHDOCKS</h4>
+                <p>Digital Twin & XR Solutions</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Preise & Förderungen</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+                <a href="news.html">News</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Northdocks GmbH. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

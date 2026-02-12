@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="Northdocks">
+    <meta name="description"
+        content="Northdocks visualisiert mit AI-powered 3D-Scanning und XR-Technologie Ihren Digitalen Zwilling. Industry 4.0 Solutions für Virtual Reality Training und Spatial Computing.">
+    <title>Northdocks | XR & Digital Twin Solutions | Industry 4.0</title>
+    <link rel="canonical" href="https://northdocks.com/" />
+    <link rel="prefetch" href="data/themes/northdocks/assets/images/socials/nd-social-youtube-hover.svg">
+    <link rel="prefetch" href="data/themes/northdocks/assets/images/socials/nd-social-facebook-hover.svg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="data/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="data/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="data/favicon/favicon-16x16.png">
+    <link rel="manifest" href="data/favicon/site.webmanifest">
+    <link rel="mask-icon" href="data/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel='stylesheet' id='wp-block-library-css' href='data/css/dist/block-library/style.min422b.css?ver=5.5.12'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='fontawesome-free-css'
+        href='data/plugins/getwid/vendors/fontawesome-free/css/all.mindeba.css?ver=5.5.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-css' href='data/plugins/getwid/vendors/slick/slick/slick.min8162.css?ver=1.9.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='slick-theme-css'
+        href='data/plugins/getwid/vendors/slick/slick/slick-theme.min8162.css?ver=1.9.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='magnific-popup-css'
+        href='data/plugins/getwid/vendors/magnific-popup/magnific-popup.minf488.css?ver=1.1.0' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='getwid-blocks-css' href='data/plugins/getwid/assets/css/blocks.style694e.css?ver=1.6.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cookie-notice-front-css'
+        href='data/plugins/cookie-notice/css/front.min422b.css?ver=5.5.12' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-min-css'
+        href='data/plugins/team-free/deprecated/assets/css/font-awesome.mindade.css?ver=20170420' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='team-free-style-css'
+        href='data/plugins/team-free/deprecated/assets/css/styledade.css?ver=20170420' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-team-css' href='data/plugins/team-free/public/css/public.min5d0a.css?ver=2.0.7'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='northdocks-style-css' href='data/themes/northdocks/style422b.css?ver=5.5.12'
+        type='text/css' media='all' />
+    <script type='text/javascript' src='data/js/jquery/jquery4a5f.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+    <script type='text/javascript' id='cookie-notice-front-js-extra'>
+        /* <![CDATA[ */
+        var cnArgs = { "ajaxUrl": "https:\/\/northdocks.com\/wp-admin\/admin-ajax.php", "nonce": "e32eaa8827", "hideEffect": "fade", "position": "bottom", "onScroll": "0", "onScrollOffset": "100", "onClick": "0", "cookieName": "cookie_notice_accepted", "cookieTime": "2592000", "cookieTimeRejected": "2592000", "cookiePath": "\/", "cookieDomain": "", "redirection": "0", "cache": "0", "refuse": "0", "revokeCookies": "0", "revokeCookiesOpt": "automatic", "secure": "1", "coronabarActive": "0" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='data/plugins/cookie-notice/js/front.min9e1e.js?ver=1.3.2'
+        id='cookie-notice-front-js'></script>
+    <script type='text/javascript' src='data/themes/northdocks/assets/js/app422b.js?ver=5.5.12'
+        id='northdocks-script-js'></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://northdocks.com" />
+    <meta property="og:title" content="Northdocks | XR & Digital Twin Solutions | Industry 4.0" />
+    <meta property="og:image" content="data/themes/northdocks/nd-og-default.jpg" />
+    <meta property="og:image:secure_url" content="data/themes/northdocks/nd-og-default.jpg" />
+    <meta property="og:description"
+        content="Northdocks visualisiert mit AI-powered 3D-Scanning und XR-Technologie Ihren Digitalen Zwilling. Industry 4.0 Solutions für Virtual Reality Training und Spatial Computing." />
+    <style type="text/css" id="wp-custom-css">
+        h2 {
+            font-style: bold;
+        }
+
+        .has-parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        /* Grid Section */
+        .nd-grid-page {
+            position: relative;
+            height: 100vh;
+            height: 100dvh;
+            width: 100%;
+            padding: 0 !important;
+            margin: 0 !important;
+            overflow: hidden;
+        }
+
+        .nd-grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            /* Equal sizes */
+            width: 100%;
+            height: 100%;
+            /* Fill parent exactly */
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            gap: 0;
+        }
+
+        .nd-grid-item {
+            position: relative;
+            background-color: #000;
+            /* Black to match title and hide gaps */
+            overflow: hidden;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nd-grid-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nd-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            margin: 0;
+            padding: 0;
+            transition: transform 0.5s ease;
+        }
+
+        /* Hover Effect */
+        .nd-grid-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Title Styling */
+        .nd-grid-title {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .nd-grid-title h2 {
+            font-size: 8rem;
+            margin: 0;
+            color: #ff9900;
+            /* Orange text */
+            font-weight: bold;
+            line-height: 0.9;
+        }
+
+        /* Mobile / Responsive Switch for Browser Width */
+        @media (max-width: 1000px) {
+            .nd-grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, auto);
+                align-content: center;
+            }
+
+            .nd-grid-title {
+                padding: 10px;
+            }
+
+            .nd-grid-title h2 {
+                font-size: 1.4rem;
+                /* Smaller text for mobile */
+            }
+
+            .nd-grid-item img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body class="home page-template-default page page-id-8 cookies-not-set">
+
+    <!-- Header -->
+    <header>
+        <div id="nd-logo">
+            <a href="./"></a>
+        </div>
+        <div id="nd-nav-bg"></div>
+        <nav data-visible="false">
+            <div id="nd-nav-burger"></div>
+            <div class="menu-main-menu-container">
+                <ul id="menu-main-menu" class="menu"></ul>
+            </div>
+        </nav>
+        <script type='text/javascript' src='data/themes/northdocks/assets/js/menu-loader.js'></script>
+        <script>loadMenu('./', 'home');</script>
+    </header>
+
+    <!-- Page Navigation -->
+    <div class="nd-page-arrow-center nd-page-arrow-center-top">
+        <img id="nd-page-up" class="nd-page-nav-arrow" src="data/themes/northdocks/assets/images/ndarrow.svg">
+    </div>
+    <div class="nd-page-arrow-center nd-page-arrow-center-bottom">
+        <img id="nd-page-down" class="nd-page-nav-arrow" src="data/themes/northdocks/assets/images/ndarrow.svg">
+    </div>
+    <div id="nd-page-container">
+
+        <!-- Page Scroll Indicators -->
+        <div id="nd-page-indicators">
+            <ul>
+                <li class="active" data-page-index="0"></li>
+                <li class="" data-page-index="1"></li>
+                <li class="" data-page-index="2"></li>
+                <li class="" data-page-index="3"></li>
+                <li class="" data-page-index="4"></li>
+                <li class="" data-page-index="5"></li>
+                <li class="" data-page-index="6"></li>
+                <li class="" data-page-index="7"></li>
+            </ul>
+        </div>
+
+        <!-- Sub-Pages -->
+        <section class="nd-page">
+            <!-- wp:image {"id":328,"sizeSlug":"full","className":"nd-page-image-fill"} -->
+            <figure class="wp-block-image size-full nd-page-header-image">
+                <img src="data/images/bruecke_logo_titel.jpg" alt="" class="wp-image-328"
+                    alt="Northdocks Header - Brücke mit Logo" />
+            </figure>
+            <!-- /wp:image -->
+
+            <!-- wp:nextpage -->
+        </section>
+        <section class="nd-page nd-grid-page">
+            <div class="nd-grid-container">
+                <!-- Row 1 -->
+                <div class="nd-grid-item nd-grid-title">
+                    <h2>Our five Verticals</h2>
+                </div>
+                <!-- VR Training -->
+                <div class="nd-grid-item">
+                    <a href="https://www.northdocks.com/digitaler-zwilling/" target="_self"><img
+                            src="data/images/verticals/grid_pos_01.png" alt="VR Training"></a>
+                </div>
+                <!-- 3D Visualization -->
+                <div class="nd-grid-item">
+                    <a href="https://firefightervrmobile.de/" target="_blank"><img
+                            src="data/images/verticals/grid_pos_02.png" alt="3D Visualization"></a>
+                </div>
+
+                <!-- Row 2 -->
+                <!-- Digital Twin -->
+                <div class="nd-grid-item">
+                    <a href="https://meditrainvr.com/" target="_blank"><img src="data/images/verticals/grid_pos_03.png"
+                            alt="Digital Twin"></a>
+                </div>
+                <!-- Unreal Engine -->
+                <div class="nd-grid-item">
+                    <img src="data/images/verticals/grid_pos_04.png" alt="Unreal Engine">
+                </div>
+                <!-- AI 3D Scanning -->
+                <div class="nd-grid-item">
+                    <a href="https://www.northdocks.com/3d-experience/" target="_self"><img
+                            src="data/images/verticals/grid_pos_05.png" alt="AI 3D Scanning"></a>
+                </div>
+            </div><!-- wp:nextpage -->
+        </section>
+        <section class="nd-page">
+
+            <!-- /wp:nextpage -->
+
+            <!-- wp:image {"id":844,"sizeSlug":"full","className":"nd-page-image-fill"} -->
+            <figure class="wp-block-image size-full nd-page-image-fill"><img src="data/images/turmorange.jpg" alt=""
+                    class="wp-image-844" alt="Industrieturm bei Sonnenuntergang" /></figure>
+            <!-- /wp:image -->
+
+            <!-- wp:columns -->
+            <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center"} -->
+                <div class="wp-block-column is-vertically-aligned-center"></div>
+                <!-- /wp:column -->
+
+                <!-- wp:column -->
+                <div class="wp-block-column"></div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:columns {"verticalAlignment":"center"} -->
+            <div class="wp-block-columns are-vertically-aligned-center">
+                <!-- wp:column {"verticalAlignment":"center"} -->
+                <div class="wp-block-column is-vertically-aligned-center"><!-- wp:freeform -->
+                    <h2>Wer wir sind</h2>
+                    <p>Wir sind ein Team von Spezialisten in der Erstellung immersiver Innen- und Außen- Räume mit
+                        XR-Technologie und Spatial Computing. Wir sind
+                        von Digitalisierung überzeugt und arbeiten mit unseren Kunden an einer Vernetzung der realen und
+                        digitalen Welt durch Industry 4.0 Lösungen.</p>
+                    <!-- /wp:freeform -->
+                </div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"verticalAlignment":"center"} -->
+                <div class="wp-block-column is-vertically-aligned-center"></div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:nextpage -->
+        </section>
+        <section class="nd-page">
+
+            <!-- /wp:nextpage -->
+
+            <!-- wp:image {"id":845,"sizeSlug":"full","className":"nd-page-image-fill"} -->
+            <figure class="wp-block-image size-full nd-page-image-fill"><img src="data/images/anlage-yan2.jpg" alt=""
+                    class="wp-image-845" alt="Industrieanlage Außenansicht" /></figure>
+            <!-- /wp:image -->
+
+            <!-- wp:columns -->
+            <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column -->
+                <!-- wp:column -->
+                <div class="wp-block-column"></div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"verticalAlignment":"center"} -->
+                <div class="wp-block-column"><!-- wp:heading -->
+                    <h2><strong>Unser Anspruch</strong></h2>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:paragraph -->
+                    <p>Wir liefern technisch präzise Lösungen in Form von Gesamtpaketen. Alles, was zur Bewältigung der
+                        jeweiligen Herausforderung nötig ist, bekommen Sie bei uns aus einer Hand. Bei der Betreuung
+                        unserer Kunden legen wir Wert auf persönliche und individuelle Beratung über den gesamten
+                        Prozess hinweg. Als Technikexperten sorgen wir dafür, dass Sie sich nicht mit Details aufhalten
+                        müssen, sondern sich ganz auf das große Ganze konzentrieren können.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:nextpage -->
+        </section>
+        <section class="nd-page">
+
+            <!-- /wp:nextpage -->
+
+            <!-- wp:image {"id":846,"sizeSlug":"full","className":"nd-page-image-fill"} -->
+            <figure class="wp-block-image size-full nd-page-image-fill"><img src="data/images/scycrane.jpg" alt=""
+                    class="wp-image-846" alt="Kran und Skyline" /></figure>
+            <!-- /wp:image -->
+
+            <!-- wp:spacer {"height":151} -->
+            <div style="height:151px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+
+            <!-- wp:columns {"verticalAlignment":"center"} -->
+            <div class="wp-block-columns are-vertically-aligned-center">
+                <!-- wp:column {"verticalAlignment":"center","width":10} -->
+                <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:10%"></div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"verticalAlignment":"center","width":100} -->
+                <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:100%"></div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"verticalAlignment":"center","width":10} -->
+                <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:10%"></div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:heading -->
+            <h2>Wir lieben Technik. <br>Nutzen Sie mit uns die Möglichkeiten echter Digitalisierung mit Industry 4.0 und
+                XR.</h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:nextpage -->
+        </section>
+        <section class="nd-page">
+
+            <!-- /wp:nextpage -->
+
+            <!-- wp:image {"id":849,"sizeSlug":"full","className":"nd-page-image-fill"} -->
+            <figure class="wp-block-image size-full nd-page-image-fill"><img src="data/images/hubschrauber.jpg" alt=""
+                    class="wp-image-849" alt="Hubschrauber im Flug" /></figure>
+            <!-- /wp:image -->
+
+            <!-- wp:columns {"verticalAlignment":"center"} -->
+            <div class="wp-block-columns are-vertically-aligned-center">
+                <!-- wp:column {"verticalAlignment":"center"} -->
+                <div class="wp-block-column is-vertically-aligned-center"><!-- wp:freeform -->
+                    <h2>Unser Vorgehen</h2>
+                    <p>Geschwindigkeit und Qualität gehen bei uns Hand in Hand. Wichtig ist für uns der Fokus auf ein
+                        optimales Ergebnis, denn ein gutes Produkt ist nur eines, das genutzt wird. Wir liefern zeitnahe
+                        Grundlagen für Feedback und ermöglichen so einen gemeinsamen Prozess auf Augenhöhe. Auf sich
+                        verändernde Umstände und Kundenwünsche reagieren wir mit der flexiblen Anpassung unserer
+                        Lösungen.</p>
+                    <!-- /wp:freeform -->
+                </div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"verticalAlignment":"center"} -->
+                <div class="wp-block-column is-vertically-aligned-center"></div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:nextpage -->
+        </section>
+        <section class="nd-page">
+
+            <!-- /wp:nextpage -->
+
+            <!-- wp:image {"id":865,"sizeSlug":"full","className":"nd-page-image-fill"} -->
+            <figure class="wp-block-image size-full nd-page-image-fill"><img src="data/images/glas-motor3.jpg" alt=""
+                    class="wp-image-865" alt="Glasmotor Detailansicht" /></figure>
+            <!-- /wp:image -->
+
+            <!-- wp:columns {"verticalAlignment":"center"} -->
+            <div class="wp-block-columns are-vertically-aligned-center">
+                <!-- wp:column {"verticalAlignment":"center"} -->
+                <div class="wp-block-column is-vertically-aligned-center"><!-- wp:freeform -->
+                    <h2>Schlüsselbegriffe unserer Vorgehensweise</h2>
+                    <!-- /wp:freeform -->
+
+                    <!-- wp:paragraph -->
+                    <p>1. Iterative Prozesse: Schaffung von früh sichtbaren Diskussionsgrundlagen</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph -->
+                    <p>2. Gemeinsam: Wir lernen Ihre Sprache, nicht umgekehrt</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph -->
+                    <p>3. Hohe Flexibilität: Kurzfristige Umsetzung von Änderungswünschen und Ihren Bedürfnissen</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph -->
+                    <p>4. Effiziente Umsetzung von Bild zum 3D Modell mit LiDAR-Scanning, Photogrammetrie oder NeRF -
+                        zum virtuell begehbaren Digitalen Zwilling</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"verticalAlignment":"center"} -->
+                <div class="wp-block-column is-vertically-aligned-center"></div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:nextpage -->
+        </section>
+        <section class="nd-page">
+
+            <!-- /wp:nextpage -->
+
+            <!-- wp:image {"id":334,"sizeSlug":"full","className":"nd-page-image-fill"} -->
+            <figure class="wp-block-image size-full nd-page-image-fill"><img src="data/images/Hoennetal_5.jpg" alt=""
+                    class="wp-image-334" alt="Hönnetal Landschaft" /></figure>
+            <!-- /wp:image -->
+
+            <!-- wp:spacer {"height":58} -->
+            <div style="height:58px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+
+            <!-- wp:heading -->
+            <h2>Wir helfen unseren Kunden ökologischer, ökonomischer und innovativer Gefahrenprävention zu betreiben,
+                Ausbildung attraktiver zu gestalten und Entscheidungen zielsicher zu fällen.</h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph -->
+            <p></p>
+            <!-- /wp:paragraph -->
+        </section>
+
+        <!-- Footer -->
+        <!--<div id="nd-footer" class="">
+	<div id="nd-footer-content">
+		<div class="nd-row">
+			<div class="nd-col-25">
+					</div>
+			<div class="nd-col-25">
+					</div>
+			<div class="nd-col-25">
+					</div>
+			<div class="nd-clearfix"></div>
+		</div>
+		<div class="nd-row">
+			<div class="nd-col-100 nd-footer-copyright">
+				<hr>
+				&copy;  Northdocks GmbH
+			</div>
+            <div class="nd-clearfix"></div>
+		</div>
+	</div>
+</div>-->
+    </div>
+
+    <!-- Socials -->
+    <div id="nd-socials" class="nd-social-icons-container">
+        <ul>
+            <ul>
+                <li data-label="youtube">
+                    <a href="https://www.youtube.com/channel/UCeLUvZLBZILS2amh5kGuH3A" target="_blank"></a>
+                </li>
+                <li data-label="facebook">
+                    <a href="https://de-de.facebook.com/northdocks" target="_blank"></a>
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+    <!-- Legal Links -->
+    <div id="nd-legal-links">
+        <div class="menu-rechtliches-container">
+            <ul id="menu-rechtliches" class="menu">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                    <a href="impressum/">Impressum</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                    <a href="datenschutz/">Datenschutz</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6FVZFSWQL%22%3E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-L6FVZFSWQL');
+    </script>
+
+    <!-- Scripts Bottom -->
+    <script type='text/javascript' id='getwid-blocks-frontend-js-js-extra'>
+        /* <![CDATA[ */
+        var Getwid = {
+            settings: {
+                date_time_utc: new Date().toUTCString(),
+                google_api_key: ""
+            },
+            ajax_url: "https:\/\/northdocks.com\/wp-admin\/admin-ajax.php",
+            nonces: {
+                recaptcha_v2_contact_form: "2a2ffd9360"
+            }
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='data/plugins/getwid/assets/js/frontend.blocks694e.js?ver=1.6.7'
+        id='getwid-blocks-frontend-js-js'></script>
+    <script type='text/javascript' src='data/plugins/team-free/deprecated/assets/js/slick.mindade.js?ver=20170420'
+        id='slick-min-js-js'></script>
+    <script type='text/javascript' src='data/js/wp-embed.min422b.js?ver=5.5.12' id='wp-embed-js'></script>
+
+    <!-- Cookie Notice plugin v1.3.2 by Digital Factory https://dfactory.eu/ -->
+    <div id="cookie-notice" role="banner" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom"
+        aria-label="Cookie Notice" style="background-color: rgba(0,0,0,1);">
+        <div class="cookie-notice-container" style="color: #f49924;"><span id="cn-notice-text"
+                class="cn-text-container">Diese Website benutzt Cookies. Wenn du die Website weiter nutzt, gehen wir von
+                deinem Einverständnis aus.</span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#"
+                    id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button bootstrap"
+                    aria-label="OK">OK</a></span><a href="javascript:void(0);" id="cn-close-notice"
+                data-cookie-set="accept" class="cn-close-icon" aria-label="OK"></a></div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.circular--square--outer {
+  height: 200px;
+}
+
+.circular--square {
+  border-radius: 50%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.circular--landscape {
+  /* display: inline-block; */
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: 25%;
+}
+
+.circular--portrait {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
